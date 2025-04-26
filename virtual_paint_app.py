@@ -18,16 +18,16 @@ mpDraw = mp.solutions.drawing_utils
 camera_canvas = np.zeros((720, 1280, 3), dtype=np.uint8)  # Camera + drawings
 drawing_canvas = np.zeros((720, 1280, 3), dtype=np.uint8)  # Only drawings
 drawing_canvas[:] = (255, 255, 255)  # White background for drawing canvas
-camera_canvas[:] = (60, 60, 60)  # Darker background for better contrast
+camera_canvas[:] = (60, 60, 60)  # Darker background 
 
 prev_x, prev_y = 0, 0
 painting = False
-brush_color = (0, 0, 255)  # Default color (red)
+brush_color = (0, 0, 255)  
 brush_size = 10
-eraser_size = 25  # Larger size for eraser
+eraser_size = 25 
 smoothing_factor = 0.5
 
-# More vibrant colors (BGR format)
+# More  colors (BGR format)
 colors = [
     (0, 0, 220),     # Stronger Red
     (0, 220, 0),     # Stronger Green
@@ -48,7 +48,7 @@ def draw_color_buttons(img, active_color):
     total_width = len(colors) * (button_size + button_margin) - button_margin
     start_x = (w - total_width) // 2
     
-    # Draw solid dark background for buttons
+    # Draw solid, dark background for buttons
     cv2.rectangle(img, (0, button_area_top - 10), (w, button_area_bottom + 10), (40, 40, 40), -1)
     
     # Draw color selection buttons with brighter colors
